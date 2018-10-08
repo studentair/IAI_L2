@@ -1,13 +1,11 @@
-p.klasapierwsza {
-    color: red;
-}
-p#iksde {
-    color: blue;
-}
-
 ul li {
     display: inline;
     white-space: nowrap;
+}
+
+ul {
+    text-align: center;
     background: black;
     color: white;
 }
+
