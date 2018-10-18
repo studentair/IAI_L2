@@ -7,54 +7,57 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<ul>
-    <li>1 element</li>
-    <li>2 element</li>
-    <li>3 element</li>
-</ul>
-
-<div class="container-fluid">
-    <form>
-        <legend>Uzupełnij dane:</legend>
-        <div class="form-group">
-            <label for="exampleInputName">Imię:</label>
-            <input type="text" class="form-control" id="exampleInputName" placeholder="Podaj imię">
+    <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="container-fluid">
+        <div class="formulage">
+        <form>
+            <fieldset>
+                <legend>Uzupełnij dane:</legend>
+                <div class="form-group">
+                    <label for="exampleInputName">Imię:</label>
+                    <input type="text" class="form-control" id="exampleInputName" placeholder="Podaj imię" required/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSurname">Nazwisko:</label>
+                    <input type="text" class="form-control" id="exampleInputSurname" placeholder="Podaj nazwisko" required/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">E-mail:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Podaj email" required/>
+                </div>
+                <label>Płeć:</label><br/>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked required/>
+                    <label class="form-check-label" for="inlineRadio1">Mężczyzna</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required/>
+                    <label class="form-check-label" for="inlineRadio2">Kobieta</label>
+                </div><br/><br/>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Wiadomość</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputAge">Wiek:</label>
+                    <input type="number" class="form-control" id="exampleInputAge" placeholder="Podaj wiek" min="18"/>
+                </div>
+                <div class="form-group">
+                    <label for="inputMarital">Stan cywilny</label>
+                    <select id="inputMarital" class="form-control" required>
+                        <option>Panna/Kawaler</option>
+                        <option>Żonata/Żonaty</option>
+                        <option>Wdowa/Wdowiec</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Wyślij</button>
+                <button type="reset" class="btn btn-danger">Wyczyść</button>
+            </fieldset>
+        </form>
         </div>
-        <div class="form-group">
-            <label for="exampleInputSurname">Nazwisko: </label>
-            <input type="text" class="form-control" id="exampleInputSurname" placeholder="Podaj nazwisko">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Podaj email">
-        </div>
-    <label>Płeć:</label><br/>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Mężczyzna</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Kobieta</label>
-        </div><br/><br/>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Wiadomość</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputAge">Wiek:</label>
-            <input type="number" class="form-control" id="exampleInputAge" placeholder="Podaj wiek" min="1">
-        </div>
-        <div class="form-group">
-            <label for="inputMarital">Stan cywilny</label>
-            <select id="inputMarital" class="form-control">
-                <option>Panna/Kawaler</option>
-                <option>Żonata/Żonaty</option>
-                <option>Wdowa/Wdowiec</option>
-            </select>
-        </div>
-    </form>
-</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis nulla id risus dictum, ut semper dui dapibus. Nulla ac neque dignissim, rhoncus lectus a, sodales metus. Donec luctus cursus consequat.<br/> Ut elementum suscipit volutpat. Suspendisse venenatis sed ipsum efficitur mattis. Ut convallis turpis et elit feugiat vulputate. Donec at nisi augue. Vestibulum egestas, eros ut bibendum pulvinar, neque mi eleifend odio, nec volutpat elit eros ac lorem. Nam eget risus feugiat, ultricies metus at, venenatis ex. Aliquam erat volutpat.</p>
+    </div>
 </body>
 </html>
