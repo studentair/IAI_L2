@@ -37,5 +37,16 @@ img#photo {
     float: right;
 }
 
+ul li a {
+    background-color: rebeccapurple;
+    color: chartreuse;
+    transition: all 1s;
+}
+
+ul li a:hover {
+    background-color: chartreuse;
+    color: rebeccapurple;
+}
+
 
 
