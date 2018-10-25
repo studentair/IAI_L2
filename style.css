@@ -1,6 +1,73 @@
-.klasapierwsza {
-    color: red;
+html, body {
+    height: 100%;
 }
-#iksde {
-    color: blue;
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+    color: white;
+	text-decoration: none;
+}
+
+a.active {
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+}
+
+div.formulage {
+    width: 40%;
+    background-color: gold;
+    float: left;
+    padding: 1%;
+    overflow: hidden;
+    border-radius: 4.5%;
+}
+
+div.content{
+    width: 75%;
+    float: left;
+    padding: 1%;
+    overflow: hidden;
+}
+
+div > p {
+    text-align: justify;
+    clear: both;
+}
+
+img#photo {
+    width: 25%;
+    height: 25%;
+    float: right;
+}
+
+div.sekretariat > ul > li{
+    padding: 2px;
+}
+
+iframe {
+    margin: 5px 0 5px 0;
+}
+
+
