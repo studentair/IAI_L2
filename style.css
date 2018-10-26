@@ -1,3 +1,7 @@
+div.container-fluid {
+    margin-top: 10px;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -31,24 +35,22 @@ a.active {
     text-decoration: none;
 }
 
-div.formulage {
-    position: relative;
-    left: 30%;
-    top: 50px;
-    width: 40%;
-    background-color: #333;
+div.box {
     color: #ffffff;
-    float: left;
-    padding: 1%;
-    overflow: hidden;
-    border-radius: 4.5%;
+    margin: 0 auto;
+    width: 500px;
+    background: #222222;
+    position: relative;
+    top: 50px;
+    padding: 10px;
 }
 
-div.content {
-    width: 75%;
-    float: left;
-    padding: 1%;
-    overflow: hidden;
+div.box h1 {
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 0 5px 5px;
+    border-bottom: 5px solid #161712;
 }
 
 div > p {
@@ -56,11 +58,19 @@ div > p {
     clear: both;
 }
 
-div.sekretariat > ul > li {
+div.sekretariat > div > div > ul > li {
     list-style-type: none;
-    padding: 2px;
+    padding: 0.5px;
+    font-family: 'Palatino Linotype';
 }
 
-iframe {
-    margin: 5px 0 5px 0;
+div.sekretariat > p {
+    margin-top: 10px;
+    font-family: 'Copperplate Gothic Light';
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+div.img-thumbnail > p {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
