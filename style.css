@@ -96,3 +96,30 @@ div.img-thumbnail > p {
 .myButton:hover {
     background-color: #333;
 }
+
+div.quiz {
+    position: relative;
+    top: 50px;
+    left: 30%;
+    width: 50%;
+}
+
+h4.question {
+    text-align: center;
+    padding: 20px;
+}
+
+button.buttonquiz {
+    margin-top: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
