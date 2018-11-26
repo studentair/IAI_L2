@@ -172,28 +172,70 @@ let preQuestions =
         }];
 
 let next = document.querySelector('.next');
-let back = document.querySelector('.back');
 
 let question = document.querySelector('.question');
 let answers = document.querySelectorAll('.list-group-item');
+let pointsElem = document.querySelector('.score');
+let restart = document.querySelector('.restart');
 let index = 0;
 let points = 0;
 
-for(let i=0; i<answers.length; i++)
-{
-    answers[i].addEventListener('click', function (event)
-    {
-        if(event.target.innerHTML === preQuestions[index].correct_answer)
-        {
-            points++;
-            nextQuestion();
-        }
-     });
+for (let i = 0; i < answers.length; i++) {
+    answers[i].addEventListener('click', doAction);
+}
+
+function doAction(event) {
+    //event.target - Zwraca referencję do elementu, do którego zdarzenie zostało pierwotnie wysłane.
+    if (event.target.innerHTML === preQuestions[index].correct_answer) {
+        points++;
+        pointsElem.innerText = points;
+        markCorrect(event.target);
+    }
+    else {
+        markInCorrect(event.target);
+    }
+    disableAnswers()
+}
+
+function disableAnswers() {
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].removeEventListener('click', doAction);
+    }
+}
+
+function activateAnswers() {
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].addEventListener('click', doAction);
+    }
+}
+
+function markCorrect(elem) {
+    elem.classList.add('correct');
+}
+
+function markInCorrect(elem) {
+    elem.classList.add('incorrect');
+}
+
+function clearClass() {
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].classList.remove('correct');
+        answers[i].classList.remove('incorrect');
+    }
 }
 
 function setQuestion(index) {
     question.innerHTML = preQuestions[index].question;
 
+    clearClass();
+
+    if (preQuestions[index].answers.length === 2) {
+        answers[2].style.display = 'none';
+        answers[3].style.display = 'none';
+    } else {
+        answers[2].style.display = 'block';
+        answers[3].style.display = 'block';
+    }
     answers[0].innerHTML = preQuestions[index].answers[0];
     answers[1].innerHTML = preQuestions[index].answers[1];
     answers[2].innerHTML = preQuestions[index].answers[2];
@@ -202,18 +244,31 @@ function setQuestion(index) {
 
 setQuestion(index);
 
-function nextQuestion()
-{
-    index++;
-    setQuestion(index);
-};
+
+let list = document.querySelector('.quiz');
+let results = document.querySelector('.results');
 
 next.addEventListener('click', function () {
     index++;
-    setQuestion(index);
+    if (index >= preQuestions.length) {
+        let userScorePoint = document.querySelector('.userScorePoint');
+        list.style.display = 'none';
+        results.style.display = 'block';
+        userScorePoint.innerHTML = points;
+    } else {
+        setQuestion(index);
+        activateAnswers();
+    }
 });
 
-back.addEventListener('click', function () {
-    index--;
+restart.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    index = 0;
+    points = 0;
+    pointsElem.innerHTML = '0';
     setQuestion(index);
+    activateAnswers();
+    list.style.display = 'block';
+    results.style.display = 'none';
 });

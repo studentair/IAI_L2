@@ -2,7 +2,9 @@ div.container-fluid {
     margin-top: 10px;
 }
 
-nav ul {
+/*-----------------------------------------------------*/
+
+nav > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -10,11 +12,11 @@ nav ul {
     background-color: #333;
 }
 
-nav li {
+nav > ul > li {
     float: left;
 }
 
-nav li a {
+nav > ul > li > a {
     display: block;
     color: white;
     text-align: center;
@@ -23,11 +25,13 @@ nav li a {
     transition: all 1s;
 }
 
-nav li a:hover:not(.active) {
+nav > ul > li > a:hover:not(.active) {
     background-color: #111;
     color: white;
     text-decoration: none;
 }
+
+/*-----------------------------------------------------*/
 
 a.active {
     color: white;
@@ -78,7 +82,7 @@ div.img-thumbnail > p {
 .myButton {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     right: 30px;
     z-index: 99;
     font-size: 24px;
@@ -97,29 +101,71 @@ div.img-thumbnail > p {
     background-color: #333;
 }
 
-div.quiz {
+footer.relative {
     position: relative;
-    top: 50px;
-    left: 30%;
-    width: 50%;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 auto;
+    background: #333;
+    color: white;
+    padding: 5px;
+    text-align: right;
+    font-size: 10px;
 }
 
-h4.question {
-    text-align: center;
-    padding: 20px;
-}
-
-button.buttonquiz {
-    margin-top: 20px;
-}
-
-footer {
+footer.absolute {
     position: absolute;
     bottom: 0px;
     width: 100%;
     margin: 0 auto;
+    background: #333;
+    color: white;
+    padding: 5px;
+    text-align: right;
+    font-size: 12px;
+}
+div.quiz {
+    position: relative;
+    top: 25vh;
+    left: 25vw;
+    width: 50%;
+    height: auto;
 }
 
-.list-group-item {
+div.quiz h4.question {
+    text-align: center;
+    padding: 20px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+div.quiz .list-group-item {
     cursor: pointer;
+}
+
+.correct {
+    background-color: #289a27;
+}
+
+.incorrect {
+    background-color: #c41a21;
+}
+
+div.quiz div.div_score {
+    position: absolute;
+    left: 18vw;
+}
+
+div.results {
+    position: relative;
+    top: 25vh;
+    left: 25vw;
+    width: 50%;
+    height: auto;
+}
+
+div.results div.btn-group-custom {
+    margin-bottom: 10px;
 }
