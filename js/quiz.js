@@ -172,13 +172,21 @@ let preQuestions =
         }];
 
 let next = document.querySelector('.next');
-
+let start = document.querySelector('.start');
 let question = document.querySelector('.question');
 let answers = document.querySelectorAll('.list-group-item');
 let pointsElem = document.querySelector('.score');
 let restart = document.querySelector('.restart');
 let index = 0;
 let points = 0;
+
+start.addEventListener('click', function() {
+    var menu_quiz = document.querySelector(".menu_quiz")
+    var quiz = document.querySelector(".quiz")
+
+    menu_quiz.style.display = "none";
+    quiz.style.display = "block";
+});
 
 for (let i = 0; i < answers.length; i++) {
     answers[i].addEventListener('click', doAction);

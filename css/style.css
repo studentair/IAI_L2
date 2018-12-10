@@ -31,13 +31,13 @@ nav > ul > li > a:hover:not(.active) {
     text-decoration: none;
 }
 
-/*-----------------------------------------------------*/
-
 a.active {
     color: white;
     background-color: #4CAF50;
     text-decoration: none;
 }
+
+/*-----------------------------------------------------*/
 
 div.box {
     color: #ffffff;
@@ -92,8 +92,8 @@ div.img-thumbnail > p {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
-    padding: 5px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 100%;
     transition: all 1s;
 }
 
@@ -124,7 +124,36 @@ footer.absolute {
     text-align: right;
     font-size: 12px;
 }
+
+/*-----------------------------------------------------*/
+
+div.menu_quiz{
+    display: block;
+    position: relative;
+    top: 30vh;
+    left: 25vw;
+    width: 50%;
+    height: auto;
+}
+
+div.menu_quiz p {
+    text-align: center;
+    padding: 20px;
+    font-family: "Copperplate Gothic Light";
+    font-size: 3em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+
+.buttons_menu {
+    margin-top: 10px;
+    text-align: center;
+}
+
 div.quiz {
+    display: none;
     position: relative;
     top: 25vh;
     left: 25vw;
@@ -169,3 +198,5 @@ div.results {
 div.results div.btn-group-custom {
     margin-bottom: 10px;
 }
+
+/*-----------------------------------------------------*/
