@@ -15,7 +15,7 @@ function checkForm() {
     let name = document.querySelector("#exampleInputName");
     let surname = document.querySelector("#exampleInputSurname");
     let email = document.querySelector("#exampleInputEmail1");
-    let checkRadio = document.querySelector(".form-check-input");
+    let checkRadio = document.querySelectorAll(".form-check-input");
 
     let iage = document.querySelector("#iexampleInputAge");
     let iname = document.querySelector("#iexampleInputName");
@@ -99,15 +99,22 @@ function checkForm() {
         iemail.innerHTML="Looks good!";
     }
 
-    if(checkRadio.checked)
+    if(checkRadio[0].checked)
     {
-        removeClass(checkRadio, 'is-invalid');
-        addClass(checkRadio, 'is-valid');
+        addClass(checkRadio[0], 'is-valid');
+        removeClass(checkRadio[0], 'is-invalid');
+    }
+    else if(checkRadio[1].checked)
+    {
+        addClass(checkRadio[1], 'is-valid');
+        removeClass(checkRadio[1], 'is-invalid');
     }
     else
     {
-        addClass(checkRadio, 'is-invalid');
-        removeClass(checkRadio, 'is-valid');
+        addClass(checkRadio[0], 'is-invalid');
+        removeClass(checkRadio[0], 'is-valid');
+        addClass(checkRadio[1], 'is-invalid');
+        removeClass(checkRadio[1], 'is-valid');
     }
 
 }
